@@ -45,7 +45,7 @@ body.hover-engaged .cursor-dot { width: 0; height: 0; top: 0; left: 0; backgroun
 .glass-card:hover, .vault-card:hover { transform: translateY(-5px); border-color: rgba(138, 43, 226, 0.4); box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
 .card-glow { position: absolute; inset: 0; background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(138, 43, 226, 0.2), transparent 70%), radial-gradient(circle at calc(var(--mx, 50%) + 50px) var(--my, 50%), var(--brand-cyan-glow), transparent 60%); opacity: 0; transition: 0.3s; pointer-events: none; mix-blend-mode: screen; }
 .glass-card:hover .card-glow, .vault-card:hover .card-glow { opacity: 1; }
-.tech-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--brand-purple); border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+.tech-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--brand-purple); border-top: 1px dashed var(--border-light); padding-top: 0.75rem; margin-top: 1rem; }
 
 /* SVG LATENCY CHART */
 .latency-chart { width: 100%; height: auto; overflow: visible; margin-top: 1rem; }

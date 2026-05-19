@@ -33,10 +33,10 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
     justify-content: center;
     min-height: auto;
     /*
-     * padding-top: compensa o nav fixo (height ~80px) + folga visual extra (robust padding).
-     * padding-bottom: garante que o botão EXPLORAR respira abaixo dos cards.
+     * Reduzido para encaixar o conteúdo em telas 100vh (laptops) sem que 
+     * a base fique abaixo do limite do viewport, causando o "clipping" nas tech tags.
      */
-    padding: 12rem 0 14vh 0;
+    padding: 7rem 0 5vh 0;
     z-index: 25;
 }
 
@@ -48,8 +48,8 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
     align-items: center;
     text-align: center;
     max-width: 48rem;   /* ~max-w-3xl */
-    margin: 0 auto 3rem auto; /* centraliza horizontalmente e mb-12 (3rem) */
-    padding: 0 5vw;      /* respira nas bordas */
+    margin: 0 auto 1.5rem auto; /* reduzido para economizar espaço vertical */
+    padding: 0 5vw;
 }
 .container-fluid { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 5vw; position: relative; z-index: 2; }
 .hero-layout { display: flex; flex-direction: column; justify-content: center; min-height: 80vh; }
@@ -96,12 +96,8 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
     width: 100%;
     overflow: hidden; /* Clip no X para o scroll horizontal funcionar */
     position: relative;
-    padding-top: 3rem;
-    /*
-     * padding-bottom é a folga abaixo do último elemento do card (botão EXPLORAR).
-     * Aumentado para 6rem para garantir que cards pesados (GigaMQ, Showroom) não sofram clipping.
-     */
-    padding-bottom: 6rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem; /* Restaurado para o valor original compacto */
     margin-top: 0;
 }
 
