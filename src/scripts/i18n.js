@@ -69,9 +69,22 @@ const TRANSLATIONS = {
 
     // Timeline
     'timeline.title':       'CAREER\nPATH',
+    'timeline.item1.date':  '2024 - Presente',
+    'timeline.item1.title': 'CIÊNCIA DA COMPUTAÇÃO @ MACKENZIE',
+    'timeline.item1.desc':  'Estudos avançados em estruturas de dados e algoritmos pela universidade, enquanto expando meus conhecimentos como autodidata construindo APIs e serviços back-end.',
+    'timeline.item2.date':  '2024 - Presente',
+    'timeline.item2.title': 'CAPITÃO DE E-SPORTS (UNIVERSIDADE)',
+    'timeline.item2.desc':  'Liderança de equipe na universidade. Um ambiente perfeito para exercitar empatia tática, inteligência emocional e resolução de conflitos em equipe, habilidades vitais para qualquer empresa.',
+    'timeline.item3.date':  '2022 - 2024',
+    'timeline.item3.title': 'INÍCIO E FUNDAMENTOS',
+    'timeline.item3.desc':  'Cursos de formação e imersão (Alura, EBAC). Foi aqui que construí minha base em desenvolvimento web, APIs e lógicas de bancos de dados relacionais.',
 
     // Vault
     'vault.title':          'NÚCLEO\nDE DADOS',
+    'vault.card1.title':    'MICROSSERVIÇOS',
+    'vault.card1.desc':     'Desacoplamento estrutural projetado para tolerância a falhas extremas em alta carga transacional.',
+    'vault.card2.title':    'AUTOMAÇÃO B2B',
+    'vault.card2.desc':     'Resolução cirúrgica de gargalos processuais combinando fluxos lógicos autônomos e Webhooks.',
 
     // Footer CTA
     'footer.cta':           'LET\'S BUILD\nSOMETHING.',
@@ -156,9 +169,22 @@ const TRANSLATIONS = {
 
     // Timeline
     'timeline.title':       'CAREER\nPATH',
+    'timeline.item1.date':  '2024 - Present',
+    'timeline.item1.title': 'COMPUTER SCIENCE @ MACKENZIE',
+    'timeline.item1.desc':  'Advanced studies in data structures and algorithms at the university, while expanding my knowledge as a self-taught engineer building APIs and back-end services.',
+    'timeline.item2.date':  '2024 - Present',
+    'timeline.item2.title': 'UNIVERSITY E-SPORTS CAPTAIN',
+    'timeline.item2.desc':  'Team leadership at university. A perfect environment to practice tactical empathy, emotional intelligence, and team conflict resolution — vital skills for any company.',
+    'timeline.item3.date':  '2022 - 2024',
+    'timeline.item3.title': 'START & FUNDAMENTALS',
+    'timeline.item3.desc':  'Training and immersion courses (Alura, EBAC). This is where I built my foundation in web development, APIs, and relational database logic.',
 
     // Vault
     'vault.title':          'DATA\nCORE',
+    'vault.card1.title':    'MICROSERVICES',
+    'vault.card1.desc':     'Structural decoupling designed for extreme fault tolerance under high transactional loads.',
+    'vault.card2.title':    'B2B AUTOMATION',
+    'vault.card2.desc':     'Surgical resolution of procedural bottlenecks combining autonomous logical flows and Webhooks.',
 
     // Footer CTA
     'footer.cta':           'LET\'S BUILD\nSOMETHING.',

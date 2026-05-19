@@ -1,5 +1,106 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// ─── MATRIX SCRAMBLE REVEAL EFFECT (Premium Cybernetic Interaction) ─────────
+class ScrambleTextEffect {
+    constructor(element) {
+        this.element = element;
+        this.i18nKey = element.getAttribute('data-i18n');
+        this.chars = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+        this.isAnimating = false;
+        
+        this.updateTexts();
+
+        window.addEventListener('langchange', () => {
+            setTimeout(() => {
+                this.updateTexts();
+                if (this.isInViewport()) {
+                    this.scramble();
+                } else {
+                    this.element.innerHTML = this.originalText;
+                }
+            }, 50);
+        });
+
+        this.initScrollTrigger();
+    }
+
+    updateTexts() {
+        if (this.i18nKey && window.I18n) {
+            const val = window.I18n.t(this.i18nKey);
+            this.originalText = val.replace(/\n/g, '<br>');
+            // Extrair texto limpo sem tags HTML (como <br>) para embaralhar
+            const temp = document.createElement('div');
+            temp.innerHTML = this.originalText;
+            this.cleanText = temp.innerText;
+        } else {
+            this.originalText = this.element.innerHTML;
+            this.cleanText = this.element.innerText;
+        }
+    }
+
+    isInViewport() {
+        const rect = this.element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    initScrollTrigger() {
+        ScrollTrigger.create({
+            trigger: this.element,
+            start: "top 85%",
+            onEnter: () => this.scramble(),
+            once: false
+        });
+    }
+
+    scramble() {
+        if (this.isAnimating) return;
+        this.isAnimating = true;
+        
+        let frame = 0;
+        const totalFrames = 30;
+        const interval = 25; // ms per frame
+        
+        const timer = setInterval(() => {
+            let output = '';
+            let complete = 0;
+ 
+            for (let i = 0; i < this.cleanText.length; i++) {
+                const char = this.cleanText[i];
+                if (char === ' ' || char === '\n' || char === '\r') {
+                    output += char;
+                    complete++;
+                    continue;
+                }
+
+                const startFrame = (i / this.cleanText.length) * (totalFrames * 0.6);
+                if (frame >= startFrame + 8) {
+                    output += char;
+                    complete++;
+                } else if (frame >= startFrame) {
+                    output += `<span style="color: var(--brand-cyan); text-shadow: 0 0 8px var(--brand-cyan); opacity: 0.9;">${this.chars[Math.floor(Math.random() * this.chars.length)]}</span>`;
+                } else {
+                    output += `<span style="opacity: 0.15;">${this.chars[Math.floor(Math.random() * this.chars.length)]}</span>`;
+                }
+            }
+
+            this.element.innerHTML = output;
+
+            if (complete === this.cleanText.length || frame >= totalFrames) {
+                clearInterval(timer);
+                this.element.innerHTML = this.originalText;
+                this.isAnimating = false;
+            }
+            frame++;
+        }, interval);
+    }
+}
+
+
 // -----------------------------------------
 // DYNAMIC PROJECT INJECTORS
 // -----------------------------------------
@@ -693,6 +794,11 @@ class EliteOrchestrator {
         this.cursor = new TacticalCursor();
         this.mesh = new FluidAuraEngine();
         
+        // Activating Matrix Scramble Reveals automatically on standard headings and taglines
+        document.querySelectorAll('h2.text-huge, .tagline.text-cyan').forEach(el => {
+            new ScrambleTextEffect(el);
+        });
+        
         this.lenis = new Lenis({ lerp: 0.08, smooth: true });
         this.lenis.on('scroll', ScrollTrigger.update);
         
@@ -859,14 +965,26 @@ class MasterpieceFeatures {
 
         document.querySelectorAll('.project-showcase-card').forEach(card => {
             const playWraps = card.querySelectorAll('.explore-overlay-btn, .explore-desktop-btn');
-            const titleText = card.querySelector('h3').innerText;
-            const descText = card.querySelector('p').innerText;
             
             playWraps.forEach(playWrap => {
                 playWrap.addEventListener('click', (e) => {
                     e.preventDefault();
-                    titleEl.innerText = titleText;
-                    descEl.innerText = descText;
+                    
+                    // Fetch dynamic localized content directly from DOM to ensure correct language switches
+                    const titleH3 = card.querySelector('h3');
+                    const descP = card.querySelector('p');
+                    
+                    const titleKey = titleH3 ? titleH3.getAttribute('data-i18n') : null;
+                    const descKey = descP ? descP.getAttribute('data-i18n') : null;
+                    
+                    if (titleKey) titleEl.setAttribute('data-i18n', titleKey);
+                    else titleEl.removeAttribute('data-i18n');
+                    
+                    if (descKey) descEl.setAttribute('data-i18n', descKey);
+                    else descEl.removeAttribute('data-i18n');
+                    
+                    titleEl.innerHTML = titleH3 ? titleH3.innerHTML : '';
+                    descEl.innerHTML = descP ? descP.innerHTML : '';
 
                     // Update the GitHub button to point to THIS project's repo
                     const projectId = card.getAttribute('data-project');

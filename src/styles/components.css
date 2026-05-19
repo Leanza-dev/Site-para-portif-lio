@@ -39,11 +39,104 @@ body.hover-engaged .cursor-dot { width: 0; height: 0; top: 0; left: 0; backgroun
 .status-pulse.processing { background: var(--status-processing); box-shadow: 0 0 8px var(--status-processing); animation: pulse 1s infinite alternate; }
 @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-/* GLASS CARDS */
-.glass-card, .vault-card { background: var(--glass-bg); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid var(--border-light); padding: 2.5rem; border-radius: 8px; position: relative; overflow: hidden; transition: 0.4s; }
+/* GLASS CARDS & VAULT CARDS (Cybernetic Design with Scanlines & Corner Brackets) */
+.glass-card, .vault-card { 
+    background: var(--glass-bg); 
+    backdrop-filter: blur(24px); 
+    -webkit-backdrop-filter: blur(24px); 
+    border: 1px solid var(--border-light); 
+    padding: 2.5rem; 
+    border-radius: 8px; 
+    position: relative; 
+    overflow: hidden; 
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s; 
+}
 .vault-card { border-radius: 0; border-left: 2px solid var(--brand-purple); }
-.glass-card:hover, .vault-card:hover { transform: translateY(-5px); border-color: rgba(138, 43, 226, 0.4); box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
-.card-glow { position: absolute; inset: 0; background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(138, 43, 226, 0.2), transparent 70%), radial-gradient(circle at calc(var(--mx, 50%) + 50px) var(--my, 50%), var(--brand-cyan-glow), transparent 60%); opacity: 0; transition: 0.3s; pointer-events: none; mix-blend-mode: screen; }
+
+.glass-card:hover, .vault-card:hover { 
+    transform: translateY(-5px); 
+    border-color: rgba(0, 240, 255, 0.35); 
+    box-shadow: 0 15px 45px rgba(0, 240, 255, 0.08), 0 5px 15px rgba(138, 43, 226, 0.1); 
+}
+
+/* Dynamic Cybernetic Corner Brackets */
+.glass-card::before, .glass-card::after,
+.vault-card::before, .vault-card::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Top-Left Bracket (Cyan Neon) */
+.glass-card::before, .vault-card::before {
+    top: 10px;
+    left: 10px;
+    border-top: 2px solid var(--brand-cyan);
+    border-left: 2px solid var(--brand-cyan);
+    filter: drop-shadow(0 0 4px var(--brand-cyan));
+    transform: translate(-6px, -6px);
+}
+
+/* Bottom-Right Bracket (Purple Neon) */
+.glass-card::after, .vault-card::after {
+    bottom: 10px;
+    right: 10px;
+    border-bottom: 2px solid var(--brand-purple);
+    border-right: 2px solid var(--brand-purple);
+    filter: drop-shadow(0 0 4px var(--brand-purple));
+    transform: translate(6px, 6px);
+}
+
+.glass-card:hover::before, .vault-card:hover::before {
+    opacity: 0.95;
+    transform: translate(0, 0);
+}
+
+.glass-card:hover::after, .vault-card:hover::after {
+    opacity: 0.95;
+    transform: translate(0, 0);
+}
+
+/* Premium Card Glow with Scanner sweeps */
+.card-glow { 
+    position: absolute; 
+    inset: 0; 
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(138, 43, 226, 0.15), transparent 70%), 
+                radial-gradient(circle at calc(var(--mx, 50%) + 50px) var(--my, 50%), var(--brand-cyan-glow), transparent 60%); 
+    opacity: 0; 
+    transition: opacity 0.4s; 
+    pointer-events: none; 
+    mix-blend-mode: screen; 
+}
+
+/* Laser sweep scanline inside glowing card */
+.card-glow::after {
+    content: '';
+    position: absolute;
+    inset: -100% 0;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(0, 240, 255, 0.0) 45%,
+        rgba(0, 240, 255, 0.12) 50%,
+        rgba(0, 240, 255, 0.0) 55%,
+        transparent 100%
+    );
+    animation: card-scan-laser 4s linear infinite;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+@keyframes card-scan-laser {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(50%); }
+}
+
 .glass-card:hover .card-glow, .vault-card:hover .card-glow { opacity: 1; }
 .tech-tag { 
     font-family: var(--font-mono); 
