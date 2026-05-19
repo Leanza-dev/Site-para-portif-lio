@@ -26,11 +26,14 @@ html::-webkit-scrollbar { display: none; }
 main { position: relative; z-index: 10; display: flex; flex-direction: column; }
 .sys-module { min-height: 100vh; display: flex; align-items: center; padding: 15vh 0; position: relative; }
 
-/* Arsenal precisa empilhar header + carrossel verticalmente, não lado a lado */
+/* Arsenal: empilha header + carrossel, expande para o conteúdo completo */
 #arsenal.sys-module {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    min-height: auto;        /* Não trava em 100vh — cresce com o conteúdo */
+    padding: 10vh 0 14vh 0; /* Padding bottom generoso: garante que o botão respira */
+    z-index: 25;             /* Sobe acima do .crt-overlay (9998 é fixed, não afeta stacking aqui) */
 }
 .container-fluid { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 5vw; position: relative; z-index: 2; }
 .hero-layout { display: flex; flex-direction: column; justify-content: center; min-height: 80vh; }
@@ -71,33 +74,20 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
 /* HUD */
 #persistent-hud { position: fixed; top: 0; left: 0; width: 100%; padding: 2rem 5vw; display: flex; justify-content: space-between; z-index: 100000; pointer-events: none; mix-blend-mode: difference;}
 
-/*
- * GSAP ScrollTrigger injeta um wrapper .pin-spacer ao redor de #arsenal.
- * Por padrão, esse wrapper tem overflow:hidden — o que clipa o botão EXPLORAR.
- * Este override garante que o wrapper não clipe o conteúdo vertical.
- */
-.pin-spacer {
-    overflow: visible !important;
-}
-/* O próprio #arsenal pinado também não deve clipar */
-#arsenal {
-    overflow: visible !important;
-}
 
 /* HORIZONTAL SCROLL (ARSENAL) */
 .horizontal-scroll-container {
     width: 100%;
-    /*
-     * CORREÇÃO DO CLIPPING:
-     * overflow: hidden clipa AMBOS os eixos. Isso corta o botão EXPLORAR.
-     * overflow-x: clip não cria um BFC, permitindo overflow-y: visible.
-     * Resultado: scroll horizontal bloqueado, conteúdo vertical livre.
-     */
-    overflow-x: clip;
-    overflow-y: visible;
+    overflow: hidden; /* Clip no X para o scroll horizontal funcionar */
     position: relative;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    /*
+     * padding-bottom é a folga abaixo do último elemento do card (botão EXPLORAR).
+     * Com overflow:hidden, esse padding é o que evita o clipping.
+     * O #arsenal agora tem padding-bottom:14vh, então o scroll container
+     * está dentro de um container já espaçoso o suficiente.
+     */
+    padding-bottom: 2rem;
     margin-top: 0;
 }
 
