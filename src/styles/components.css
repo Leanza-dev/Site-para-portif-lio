@@ -102,16 +102,47 @@ body.hover-engaged .cursor-dot { width: 0; height: 0; top: 0; left: 0; backgroun
 .frame-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(4, 5, 10, 0.8), transparent 50%);
+    /* Gradiente sempre vis\u00edvel na base — cria o palco para o bot\u00e3o glassmorphism */
+    background: linear-gradient(to top, rgba(4, 5, 10, 0.75) 0%, transparent 55%);
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     transition: 0.3s;
+    pointer-events: none; /* O overlay n\u00e3o bloqueia o clique da imagem */
 }
 
-.video-frame:hover .frame-overlay {
-    opacity: 1;
+/* O bot\u00e3o EXPLORAR flutua sobre a imagem — sempre vis\u00edvel (mobile safe) */
+.explore-overlay-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 20;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;    /* pill shape */
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.explore-overlay-btn:hover {
+    background: rgba(0, 240, 255, 0.15);
+    border-color: var(--brand-cyan);
+    transform: scale(1.05);
+}
+
+/* Quando o card (video-frame) recebe hover, o bot\u00e3o amplifica o glow */
+.video-frame:hover .explore-overlay-btn {
+    background: rgba(0, 0, 0, 0.75);
+    border-color: rgba(0, 240, 255, 0.6);
 }
 
 .play-btn {

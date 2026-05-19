@@ -31,9 +31,25 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    min-height: auto;        /* Não trava em 100vh — cresce com o conteúdo */
-    padding: 10vh 0 14vh 0; /* Padding bottom generoso: garante que o botão respira */
-    z-index: 25;             /* Sobe acima do .crt-overlay (9998 é fixed, não afeta stacking aqui) */
+    min-height: auto;
+    /*
+     * padding-top: compensa o nav fixo (height ~80px = ~5rem) + folga visual.
+     * padding-bottom: garante que o botão EXPLORAR respira abaixo dos cards.
+     */
+    padding: 8rem 0 14vh 0;
+    z-index: 25;
+}
+
+/* Centraliza o bloco de título da seção MEUS PROJETOS */
+.arsenal-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 48rem;   /* ~max-w-3xl */
+    margin: 0 auto;      /* centraliza horizontalmente */
+    padding: 0 5vw;      /* respira nas bordas */
 }
 .container-fluid { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 5vw; position: relative; z-index: 2; }
 .hero-layout { display: flex; flex-direction: column; justify-content: center; min-height: 80vh; }
