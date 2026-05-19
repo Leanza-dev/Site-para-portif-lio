@@ -99,11 +99,9 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
     padding-top: 3rem;
     /*
      * padding-bottom é a folga abaixo do último elemento do card (botão EXPLORAR).
-     * Com overflow:hidden, esse padding é o que evita o clipping.
-     * O #arsenal agora tem padding-bottom:14vh, então o scroll container
-     * está dentro de um container já espaçoso o suficiente.
+     * Aumentado para 6rem para garantir que cards pesados (GigaMQ, Showroom) não sofram clipping.
      */
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
     margin-top: 0;
 }
 
@@ -221,13 +219,16 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
 /* LOGO FIX & ANIMATION */
 .hud-brand img {
     mix-blend-mode: screen;
+    width: 64px; /* Aumentado do padrão para compensar o bounding box transparente */
+    height: auto;
+    scale: 1.3; /* Scale nativo que não briga com transform */
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s;
     animation: logo-pulse 4s infinite alternate;
     transform-style: preserve-3d;
     pointer-events: auto;
 }
 .hud-brand img:hover {
-    transform: rotateY(180deg) scale(1.1);
+    transform: rotateY(180deg) scale(1.2);
     filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.8));
 }
 @keyframes logo-pulse {
