@@ -644,9 +644,9 @@ class TacticalCursor {
         // Ponto segue o mouse instantaneamente
         this.xToDot = gsap.quickTo(this.dot, "x", { duration: 0, ease: "none" });
         this.yToDot = gsap.quickTo(this.dot, "y", { duration: 0, ease: "none" });
-        // O anel tem um micro-delay muito rápido para parecer fluido e não quebrado
-        this.xToRing = gsap.quickTo(this.ring, "x", { duration: 0.1, ease: "power2.out" });
-        this.yToRing = gsap.quickTo(this.ring, "y", { duration: 0.1, ease: "power2.out" });
+        // O anel agora também segue sem delay (a pedido do usuário para tirar o rastro estranho)
+        this.xToRing = gsap.quickTo(this.ring, "x", { duration: 0, ease: "none" });
+        this.yToRing = gsap.quickTo(this.ring, "y", { duration: 0, ease: "none" });
 
         window.addEventListener('mousemove', (e) => {
             this.xToDot(e.clientX); this.yToDot(e.clientY);
@@ -733,14 +733,6 @@ class FluidAuraEngine {
             if (orb.y < -orb.radius) orb.vy *= -1;
             if (orb.y > this.h + orb.radius) orb.vy *= -1;
 
-            // O cursor do mouse atrai sutilmente alguns orbes
-            if (this.mouse.active && (i === 0 || i === 1)) {
-                let dx = this.mouse.x - orb.x;
-                let dy = this.mouse.y - orb.y;
-                orb.x += dx * 0.015;
-                orb.y += dy * 0.015;
-            }
-
             // Gradiente radial
             let gradient = this.ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.radius);
             gradient.addColorStop(0, orb.color);
@@ -765,18 +757,6 @@ class FluidAuraEngine {
             if (p.x > this.w) p.x = 0;
             if (p.y < 0) p.y = this.h;
             if (p.y > this.h) p.y = 0;
-
-            // Desvio elegante do cursor do mouse
-            if (this.mouse.active) {
-                let dx = p.x - this.mouse.x;
-                let dy = p.y - this.mouse.y;
-                let dist = Math.sqrt(dx*dx + dy*dy);
-                if (dist < 120) {
-                    let force = (120 - dist) / 120;
-                    p.x += (dx / dist) * force * 3;
-                    p.y += (dy / dist) * force * 3;
-                }
-            }
 
             this.ctx.beginPath();
             this.ctx.arc(p.x, p.y, p.baseRadius, 0, Math.PI * 2);

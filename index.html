@@ -56,10 +56,14 @@
         <div class="hud-brand interactive-target" style="cursor: pointer;" onclick="window.App.lenis.scrollTo(0)">
             <img src="./src/assets/logo.png" alt="PL Logo" style="height: 70px; filter: drop-shadow(0 0 10px rgba(0,240,255,0.4));">
         </div>
-        <div style="display:flex; align-items:center; gap:20px;">
+        <div style="display:flex; align-items:center; gap:20px; pointer-events:all;">
             <a class="interactive-target text-silver" style="text-decoration:none; font-size:0.8rem; letter-spacing:1.5px; cursor:pointer;" onclick="window.App.lenis.scrollTo('#arsenal')">PROJETOS</a>
             <span style="opacity:0.3; color:var(--text-silver);">//</span>
             <a class="interactive-target text-silver" style="text-decoration:none; font-size:0.8rem; letter-spacing:1.5px; cursor:pointer;" onclick="window.App.lenis.scrollTo('#dashboard')">SKILLS</a>
+            <span style="opacity:0.3; color:var(--text-silver);">//</span>
+            <a class="interactive-target text-silver" style="text-decoration:none; font-size:0.8rem; letter-spacing:1.5px; cursor:pointer;" onclick="window.App.lenis.scrollTo('#bento')">SOBRE MIM</a>
+            <span style="opacity:0.3; color:var(--text-silver);">//</span>
+            <a class="interactive-target text-silver" style="text-decoration:none; font-size:0.8rem; letter-spacing:1.5px; cursor:pointer;" onclick="window.App.lenis.scrollTo('#liquid-footer')">CONTATO</a>
         </div>
         <div style="display:flex; align-items:center; gap:18px; pointer-events:all;">
             <!-- PT/EN Language Toggle -->
@@ -119,7 +123,7 @@
                 </svg>
 
                 <div class="container-fluid">
-                    <h2 class="font-black text-huge text-white gsap-reveal" data-i18n="dashboard.title">NÍVEL<br>TÉCNICO</h2>
+                    <h2 class="font-black text-huge text-white gsap-reveal" data-i18n="dashboard.title">NÍVEL TÉCNICO</h2>
 
                     <div class="dashboard-grid mt-12">
                         <div class="dash-context gsap-reveal" id="node-context">
