@@ -1245,4 +1245,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.App && window.App.lenis) {
         window.App.lenis.scrollTo(0, { immediate: true });
     }
+});
+
+// Extra step to combat late browser scroll restorations
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+        if (window.App && window.App.lenis) {
+            window.App.lenis.scrollTo(0, { immediate: true });
+        }
+    }, 50);
 });

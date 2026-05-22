@@ -83,7 +83,8 @@ const TRANSLATIONS = {
     'timeline.item3.desc':  'Cursos de formação e imersão (Alura, EBAC). Foi aqui que construí minha base em desenvolvimento web, APIs e lógicas de bancos de dados relacionais.',
 
     // Vault
-    'vault.title':          'NÚCLEO\nDE DADOS',
+    'vault.title.1':        'NÚCLEO',
+    'vault.title.2':        'DE DADOS',
     'vault.card1.title':    'MICROSSERVIÇOS',
     'vault.card1.desc':     'Desacoplamento estrutural projetado para tolerância a falhas extremas em alta carga transacional.',
     'vault.card2.title':    'AUTOMAÇÃO B2B',
@@ -186,7 +187,8 @@ const TRANSLATIONS = {
     'timeline.item3.desc':  'Training and immersion courses (Alura, EBAC). This is where I built my foundation in web development, APIs, and relational database logic.',
 
     // Vault
-    'vault.title':          'DATA\nCORE',
+    'vault.title.1':        'DATA',
+    'vault.title.2':        'CORE',
     'vault.card1.title':    'MICROSERVICES',
     'vault.card1.desc':     'Structural decoupling designed for extreme fault tolerance under high transactional loads.',
     'vault.card2.title':    'B2B AUTOMATION',
