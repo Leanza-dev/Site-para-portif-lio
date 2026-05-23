@@ -1959,3 +1959,35 @@ class CompilationTransition {
     }
 }
 
+
+
+// MOBILE MENU LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navContentWrapper = document.getElementById('nav-content-wrapper');
+    
+    if (mobileMenuBtn && navContentWrapper) {
+        let isMenuOpen = false;
+        
+        window.closeMobileMenu = () => {
+            if(!isMenuOpen) return;
+            isMenuOpen = false;
+            navContentWrapper.classList.remove('active');
+            if(window.App && window.App.lenis) {
+                window.App.lenis.start();
+            }
+        };
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                navContentWrapper.classList.add('active');
+                if(window.App && window.App.lenis) {
+                    window.App.lenis.stop();
+                }
+            } else {
+                window.closeMobileMenu();
+            }
+        });
+    }
+});
