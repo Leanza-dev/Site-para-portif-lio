@@ -195,8 +195,8 @@ main { position: relative; z-index: 10; display: flex; flex-direction: column; }
     padding: 2rem 0;
     margin-left: calc(-50vw + 50%); /* Força 100vw */
     background: rgba(255,255,255,0.02);
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
+    /* border-top removed for discreet transition */
+    /* border-bottom removed for discreet transition */
     position: relative;
     z-index: 10;
 }

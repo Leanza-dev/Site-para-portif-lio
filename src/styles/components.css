@@ -902,7 +902,8 @@ body.hover-engaged .cursor-dot { transform: scale(3.5); }
     padding: 3rem 2rem 2rem;
     width: 100%;
     z-index: 3;
-    background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.6) 60%, transparent 100%);\n    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.6) 60%, transparent 100%);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
     transform: translateZ(30px);
 }
 
@@ -970,13 +971,13 @@ body.hover-engaged .cursor-dot { transform: scale(3.5); }
 
 /* FLUID ORB PORTAL */
 .fluid-orb {
-    width: 300px;
-    height: 300px;
+    width: 100vw;
+    height: 100vh;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(124, 58, 237, 0.8) 0%, rgba(6, 182, 212, 0.6) 40%, rgba(6, 182, 212, 0) 70%);
-    opacity: 0.8;
-    transform: scale(0.5);
-    mix-blend-mode: screen;
+    background: radial-gradient(circle at center, rgba(124, 58, 237, 0.15) 0%, rgba(6, 182, 212, 0.1) 40%, rgba(6, 182, 212, 0) 70%);
+    opacity: 0;
+    transform: scale(1) translate3d(0,0,0);
+    mix-blend-mode: normal;
     will-change: transform, opacity;
 }
 
