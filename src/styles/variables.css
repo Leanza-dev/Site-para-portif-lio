@@ -4,9 +4,9 @@
     --sys-surface: #FFFFFF;
     
     /* TEXT COLORS */
-    --text-white: #111827; /* Dark text for light mode */
-    --text-silver: #4B5563;
-    --text-dimmed: #9CA3AF;
+    --text-white: #020617; /* Very Dark / Black text */
+    --text-silver: #334155; /* Strong dark gray for descriptions */
+    --text-dimmed: #475569; /* Evident slate gray for secondary info */
     --pure-white: #FFFFFF; /* Actual white for dark elements */
     
     /* BRAND ANTIGRAVITY (CYAN & PURPLE) */
