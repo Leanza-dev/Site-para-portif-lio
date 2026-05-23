@@ -262,7 +262,8 @@ body.hover-engaged .cursor-dot { transform: scale(3.5); }
 }
 
 /* Evita que a descrição estoure o limite do card causando clipping matemático */
-.project-info p {
+.project-info h3 { font-size: 1.5rem !important; line-height: 1.1; }
+    .project-info p {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -984,22 +985,21 @@ body.hover-engaged .cursor-dot { transform: scale(3.5); }
         max-height: 25vh !important;
         border-radius: 8px;
     }
-    .project-info h3 {
-        font-size: 1.5rem !important; /* from 4xl */
-        line-height: 1.1;
-    }
     .project-info p {
-        font-size: 0.8rem !important;
-        line-height: 1.4;
-        margin-top: 0.5rem !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6;
+        margin-top: 1.5rem !important;
     }
     .project-info .tech-tag {
-        font-size: 0.6rem;
-        padding: 4px 8px;
-        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        margin-top: 1.5rem;
     }
     .project-info {
-        padding-top: 1rem !important;
+        padding-top: 2rem !important;
         overflow-y: visible !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }

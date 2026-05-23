@@ -1454,7 +1454,7 @@ class EliteOrchestrator {
                 scrollTrigger: {
                     trigger: "#arsenal",
                     pin: true,
-                    scrub: window.innerWidth < 768 ? 2.5 : 1, // Slower scrub on mobile for fluidity
+                    scrub: window.innerWidth < 768 ? true : 1, // Native smooth scrub on mobile
                     start: "top top",
                     end: () => `+=${track.scrollWidth}`, // Duração do scroll baseada na largura
                     invalidateOnRefresh: true
