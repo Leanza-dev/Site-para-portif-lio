@@ -1,6 +1,6 @@
 ﻿gsap.registerPlugin(ScrollTrigger);
 
-// â”€â”€â”€ MATRIX SCRAMBLE REVEAL EFFECT (Premium Cybernetic Interaction) â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ MATRIX SCRAMBLE REVEAL EFFECT (Premium Cybernetic Interaction) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
 class ScrambleTextEffect {
     constructor(element) {
         this.element = element;
@@ -240,7 +240,7 @@ const ProjectInjectors = {
 <div class="code-line"><span class="line-num">3</span><span class="line-code">    <span class="go-kw">case</span> c.outbound &lt;- msg:</span></div>
 <div class="code-line"><span class="line-num">4</span><span class="line-code">        <span class="go-kw">return</span> <span class="go-kw">nil</span></span></div>
 <div class="code-line"><span class="line-num">5</span><span class="line-code">    <span class="go-kw">default</span>:</span></div>
-<div class="code-line"><span class="line-num">6</span><span class="line-code">        <span class="go-comment">// Buffer full â€” drop, don't block publisher</span></span></div>
+<div class="code-line"><span class="line-num">6</span><span class="line-code">        <span class="go-comment">// Buffer full ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â drop, don't block publisher</span></span></div>
 <div class="code-line"><span class="line-num">7</span><span class="line-code">        <span class="go-kw">return</span> fmt.<span class="go-fn">Errorf</span>(</span></div>
 <div class="code-line"><span class="line-num">8</span><span class="line-code">            <span class="go-fn">"client %s: buffer full"</span>, c.id)</span></div>
 <div class="code-line"><span class="line-num">9</span><span class="line-code">    }</span></div>
@@ -419,7 +419,7 @@ const ProjectInjectors = {
 <div class="code-line"><span class="line-num">5</span><span class="line-code">            event.eventId() + <span class="java-fn">"-INVENTORY_FAILED"</span>)) {</span></div>
 <div class="code-line"><span class="line-num">6</span><span class="line-code">        <span class="java-kw">return</span>; <span class="java-comment">// Inbox Pattern: duplicate delivery</span></span></div>
 <div class="code-line"><span class="line-num">7</span><span class="line-code">    }</span></div>
-<div class="code-line"><span class="line-num">8</span><span class="line-code">    logger.<span class="java-fn">warn</span>(<span class="java-fn">"SAGA FAILED at inventory â€” {}"</span>,</span></div>
+<div class="code-line"><span class="line-num">8</span><span class="line-code">    logger.<span class="java-fn">warn</span>(<span class="java-fn">"SAGA FAILED at inventory ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â {}"</span>,</span></div>
 <div class="code-line"><span class="line-num">9</span><span class="line-code">        event.<span class="java-fn">orderId</span>());</span></div>
 <div class="code-line"><span class="line-num">10</span><span class="line-code">    <span class="java-fn">compensatePayment</span>(event);</span></div>
 <div class="code-line"><span class="line-num">11</span><span class="line-code">}</span></div>
@@ -484,7 +484,7 @@ const ProjectInjectors = {
             steps[0].classList.add('success');
 
             // Step 2: Payment
-            log("Reservando fundos no MicroserviÃ§o de Pagamento...");
+            log("Reservando fundos no MicroserviÃƒÆ’Ã‚Â§o de Pagamento...");
             steps[1].classList.add('active');
             await new Promise(r => setTimeout(r, 1200));
             steps[1].classList.add('success');
@@ -499,7 +499,7 @@ const ProjectInjectors = {
                 log("ERRO: Item fora de estoque!", "#e06c75");
                 steps[2].classList.add('fail');
                 await new Promise(r => setTimeout(r, 800));
-                log("Iniciando COMPENSAÃ‡ÃƒO (Rollback)...", "#c678dd");
+                log("Iniciando COMPENSAÃƒÆ’Ã¢â‚¬Â¡ÃƒÆ’Ã†â€™O (Rollback)...", "#c678dd");
                 await new Promise(r => setTimeout(r, 1000));
                 log("Pagamento estornado com sucesso.", "#98c379");
                 steps[1].classList.remove('success');
@@ -1200,7 +1200,7 @@ function wrapCharacters(selector) {
     });
 }
 
-// 1. CURSOR CIRÃšRGICO (Velocidade do ring aumentada de 0.25 pra 0.1)
+// 1. CURSOR CIRÃƒÆ’Ã…Â¡RGICO (Velocidade do ring aumentada de 0.25 pra 0.1)
 class TacticalCursor {
     constructor() {
         this.cursor = document.getElementById('tactical-cursor');
@@ -1208,7 +1208,7 @@ class TacticalCursor {
         this.dot = this.cursor.querySelector('.cursor-dot');
         this.ring = this.cursor.querySelector('.cursor-crosshair');
         
-        // Cursor muito responsivo com delay quase nulo (apenas para nÃ£o quebrar a engine do GSAP)
+        // Cursor muito responsivo com delay quase nulo (apenas para nÃƒÆ’Ã‚Â£o quebrar a engine do GSAP)
         this.xToDot = gsap.quickTo(this.dot, "x", { duration: 0.02, ease: "none" });
         this.yToDot = gsap.quickTo(this.dot, "y", { duration: 0.02, ease: "none" });
         this.xToRing = gsap.quickTo(this.ring, "x", { duration: 0.02, ease: "none" });
@@ -1287,7 +1287,7 @@ class FluidAuraEngine {
             });
         }
 
-        // PartÃ­culas soltas (Poeira estelar interativa)
+        // PartÃƒÆ’Ã‚Â­culas soltas (Poeira estelar interativa)
         this.particles = [];
         for (let i = 0; i < 80; i++) {
             this.particles.push({
@@ -1320,7 +1320,7 @@ class FluidAuraEngine {
             gradient.addColorStop(0, orb.color);
             gradient.addColorStop(1, 'rgba(255,255,255,0)');
 
-            // Blend multiply para criar aquele efeito translÃºcido no fundo branco
+            // Blend multiply para criar aquele efeito translÃƒÆ’Ã‚Âºcido no fundo branco
             this.ctx.globalCompositeOperation = 'multiply';
             this.ctx.fillStyle = gradient;
             this.ctx.beginPath();
@@ -1328,7 +1328,7 @@ class FluidAuraEngine {
             this.ctx.fill();
         });
 
-        // Desenhar partÃ­culas
+        // Desenhar partÃƒÆ’Ã‚Â­culas
         this.ctx.globalCompositeOperation = 'multiply';
         this.particles.forEach(p => {
             p.x += p.vx;
@@ -1360,7 +1360,7 @@ class FluidAuraEngine {
     }
 }
 
-// 3. ORQUESTRADOR E ANIMAÃ‡Ã•ES GSAP
+// 3. ORQUESTRADOR E ANIMAÃƒÆ’Ã¢â‚¬Â¡ÃƒÆ’Ã¢â‚¬Â¢ES GSAP
 class EliteOrchestrator {
     constructor() {
         wrapCharacters('.split-text');
@@ -1383,11 +1383,11 @@ class EliteOrchestrator {
         // Ativa os 6 recursos Masterpiece
         this.masterpiece = new MasterpieceFeatures(this.lenis);
         
-        // Transição "A Compilação" Back -> Front
+        // TransiÃƒÂ§ÃƒÂ£o "A CompilaÃƒÂ§ÃƒÂ£o" Back -> Front
         this.compilationTransition = new CompilationTransition();
 
-        // Simulação gravitacional interativa (substitui Núcleo de Dados)
-        this.gravityWell = new GravityWell();
+        // SimulaÃƒÂ§ÃƒÂ£o gravitacional interativa (substitui NÃƒÂºcleo de Dados)
+        this.kineticGrid = new KineticGrid();
 
         gsap.ticker.add((time) => {
             this.lenis.raf(time * 1000);
@@ -1431,7 +1431,7 @@ class EliteOrchestrator {
 
         // Fios de Energia interagindo com o Scroll
         gsap.to('.data-wire', {
-            strokeDashoffset: -200, // Faz a energia fluir mais rÃ¡pido no scroll
+            strokeDashoffset: -200, // Faz a energia fluir mais rÃƒÆ’Ã‚Â¡pido no scroll
             ease: "none",
             scrollTrigger: {
                 trigger: "#dashboard",
@@ -1453,7 +1453,7 @@ class EliteOrchestrator {
         // HORIZONTAL SCROLL (ARSENAL)
         const track = document.getElementById('horizontal-track');
         if(track) {
-            // A largura total que precisamos mover Ã© o tamanho do track menos a tela visÃ­vel
+            // A largura total que precisamos mover ÃƒÆ’Ã‚Â© o tamanho do track menos a tela visÃƒÆ’Ã‚Â­vel
             let trackWidth = track.scrollWidth - window.innerWidth;
             gsap.to(track, {
                 x: () => - (track.scrollWidth - window.innerWidth + 100), // +100px padding extra no final
@@ -1463,7 +1463,7 @@ class EliteOrchestrator {
                     pin: true,
                     scrub: window.innerWidth < 768 ? 1.5 : 1, // Smooth scrub on mobile (hardware accelerated)
                     start: "top top",
-                    end: () => `+=${track.scrollWidth}`, // DuraÃ§Ã£o do scroll baseada na largura
+                    end: () => `+=${track.scrollWidth}`, // DuraÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Â£o do scroll baseada na largura
                     invalidateOnRefresh: true
                 }
             });
@@ -1635,7 +1635,7 @@ class MasterpieceFeatures {
                         
                         // 1. Puxa a logo pro meio, girando e aumentando
                         tl.to(logo, { x: tx, y: ty, scale: 6, rotation: 180, duration: 0.6, ease: "power4.inOut" })
-                        // 2. Logo desaparece (implosÃ£o)
+                        // 2. Logo desaparece (implosÃƒÆ’Ã‚Â£o)
                           .to(logo, { scale: 0, opacity: 0, duration: 0.3, ease: "power2.in" })
                         // 3. Abre o ambiente do centro e injeta o projeto
                           .add(() => { 
@@ -1648,7 +1648,7 @@ class MasterpieceFeatures {
                               "-=0.2"
                           );
                     } else {
-                        // Fallback caso nÃ£o tenha logo
+                        // Fallback caso nÃƒÆ’Ã‚Â£o tenha logo
                         theater.classList.add('active');
                         injectStage();
                         gsap.fromTo(theater, { clipPath: `circle(0% at 50% 50%)` }, { clipPath: `circle(150% at 50% 50%)`, duration: 0.8, ease: "power3.inOut" });
@@ -1663,10 +1663,10 @@ class MasterpieceFeatures {
         const logo = document.querySelector('.hud-brand img');
         
         if(theater) {
-            gsap.killTweensOf('.log-line'); // Para animaÃ§Ãµes residuais
+            gsap.killTweensOf('.log-line'); // Para animaÃƒÆ’Ã‚Â§ÃƒÆ’Ã‚Âµes residuais
             const tl = gsap.timeline();
             
-            // 1. Fecha o ambiente (implosÃ£o da tela negra)
+            // 1. Fecha o ambiente (implosÃƒÆ’Ã‚Â£o da tela negra)
             tl.to(theater, {
                 clipPath: `circle(0% at 50% 50%)`, duration: 0.6, ease: "power3.inOut",
                 onComplete: () => theater.classList.remove('active')
@@ -1714,7 +1714,7 @@ class MasterpieceFeatures {
                 input.value = '';
                 
                 let response = '';
-                if(cmd === 'whoami') response = 'Pedro Leanza - Especialista em Arquiteturas EscalÃ¡veis.';
+                if(cmd === 'whoami') response = 'Pedro Leanza - Especialista em Arquiteturas EscalÃƒÆ’Ã‚Â¡veis.';
                 else if(cmd === 'contact') response = 'E-mail: leanzapedro@gmail.com | IG: @__leanza__ | Tel: 11933283001';
                 else if(cmd === 'skills') response = 'Go, Rust, Node.js, React, Kafka, Redis, PostgreSQL, Kubernetes.';
                 else if(cmd === 'clear') { 
@@ -1752,7 +1752,7 @@ class MasterpieceFeatures {
                 const hx = (e.clientX - rect.left) - rect.width / 2;
                 const hy = (e.clientY - rect.top) - rect.height / 2;
                 
-                // Puxa o botÃ£o com forÃ§a magnÃ©tica
+                // Puxa o botÃƒÆ’Ã‚Â£o com forÃƒÆ’Ã‚Â§a magnÃƒÆ’Ã‚Â©tica
                 gsap.to(btn, { x: hx * 0.4, y: hy * 0.4, duration: 0.5, ease: "power3.out" });
             });
             wrap.addEventListener('mouseleave', () => {
@@ -1881,9 +1881,9 @@ window.addEventListener('load', () => {
     }, 50);
 });
 
-// â”€â”€â”€ SECURITY & ANTI-CLONING â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ SECURITY & ANTI-CLONING ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
 (() => {
-    // 1. Domain Lock (Descomente e adicione seu domÃ­nio final para ativar)
+    // 1. Domain Lock (Descomente e adicione seu domÃƒÆ’Ã‚Â­nio final para ativar)
     /*
     const allowedDomains = ['localhost', '127.0.0.1', 'vercel.app', 'pedroleanza.com'];
     const currentDomain = window.location.hostname;
@@ -1917,26 +1917,25 @@ window.addEventListener('load', () => {
     });
 })();
 
-// â”€â”€â”€ GRAVITY WELL â€” Newtonian N-Body Simulation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-class GravityWell {
+// Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ KINETIC GRID Ã¢â‚¬â€ Magnetic Topology Simulation Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+class KineticGrid {
     constructor() {
-        this.canvas = document.getElementById('gravity-canvas');
+        this.canvas = document.getElementById('kinetic-canvas');
         if (!this.canvas) return;
         this.ctx = this.canvas.getContext('2d');
-        this.particles = [];
-        this.mouse = { x: 0, y: 0, active: false };
+        this.points = [];
+        this.mouse = { x: -1000, y: -1000, active: false };
         this.isVisible = false;
         this.animFrame = null;
-
-        // Physics constants
-        this.G = 800;            // Gravitational constant (center mass)
-        this.G_MOUSE = 2000;     // Cursor gravity (stronger pull)
-        this.DAMPING = 0.9992;   // Velocity decay (very subtle, keeps orbits stable)
-        this.TRAIL_ALPHA = 0.08; // Trail fade per frame
-
+        
+        this.SPACING = 40;
+        this.TENSION = 0.05;
+        this.DAMPING = 0.75;
+        this.MOUSE_RADIUS = 300;
+        
         this.resize();
         window.addEventListener('resize', () => this.resize());
-
+        
         this.canvas.addEventListener('mousemove', (e) => {
             const rect = this.canvas.getBoundingClientRect();
             this.mouse.x = e.clientX - rect.left;
@@ -1945,13 +1944,15 @@ class GravityWell {
         });
         this.canvas.addEventListener('mouseleave', () => {
             this.mouse.active = false;
+            // Throw mouse far away on leave
+            this.mouse.x = -1000;
+            this.mouse.y = -1000;
         });
-
-        // Only animate when visible (ScrollTrigger)
+        
         ScrollTrigger.create({
-            trigger: this.canvas,
-            start: 'top 90%',
-            end: 'bottom 10%',
+            trigger: this.canvas.parentElement,
+            start: 'top 100%',
+            end: 'bottom 0%',
             onEnter: () => this.start(),
             onLeave: () => this.stop(),
             onEnterBack: () => this.start(),
@@ -1961,52 +1962,33 @@ class GravityWell {
 
     resize() {
         const rect = this.canvas.parentElement.getBoundingClientRect();
-        this.w = this.canvas.width = rect.width;
-        this.h = this.canvas.height = Math.max(rect.height, 500);
-        this.cx = this.w / 2;
-        this.cy = this.h / 2;
-        this.initParticles();
+        const dpr = window.devicePixelRatio || 1;
+        this.w = rect.width;
+        this.h = rect.height;
+        this.canvas.width = this.w * dpr;
+        this.canvas.height = this.h * dpr;
+        this.ctx.scale(dpr, dpr);
+        
+        this.initPoints();
     }
 
-    initParticles() {
-        this.particles = [];
-        const count = 80;
-
-        for (let i = 0; i < count; i++) {
-            // Random orbital radius
-            const orbitR = 80 + Math.random() * (Math.min(this.w, this.h) * 0.35);
-            const angle = Math.random() * Math.PI * 2;
-
-            // Position on orbit
-            const x = this.cx + Math.cos(angle) * orbitR;
-            const y = this.cy + Math.sin(angle) * orbitR;
-
-            // Tangential velocity for stable orbit: v = sqrt(G * M / r)
-            const speed = Math.sqrt(this.G / orbitR) * (0.7 + Math.random() * 0.6);
-            const vx = -Math.sin(angle) * speed;
-            const vy = Math.cos(angle) * speed;
-
-            // Color: cyan or purple with variation
-            const isCyan = Math.random() > 0.35;
-            const hue = isCyan ? 185 + Math.random() * 15 : 265 + Math.random() * 20;
-            const sat = 80 + Math.random() * 20;
-            const light = 55 + Math.random() * 20;
-
-            this.particles.push({
-                x, y, vx, vy,
-                radius: 1.2 + Math.random() * 2.5,
-                color: `hsl(${hue}, ${sat}%, ${light}%)`,
-                alpha: 0.6 + Math.random() * 0.4
-            });
+    initPoints() {
+        this.points = [];
+        const cols = Math.ceil(this.w / this.SPACING) + 2;
+        const rows = Math.ceil(this.h / this.SPACING) + 2;
+        
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                const ox = (i - 1) * this.SPACING;
+                const oy = (j - 1) * this.SPACING;
+                this.points.push({ x: ox, y: oy, ox: ox, oy: oy, vx: 0, vy: 0 });
+            }
         }
     }
 
     start() {
         if (this.isVisible) return;
         this.isVisible = true;
-        // Clear canvas for fresh start
-        this.ctx.fillStyle = '#050508';
-        this.ctx.fillRect(0, 0, this.w, this.h);
         this.tick();
     }
 
@@ -2026,93 +2008,74 @@ class GravityWell {
     }
 
     update() {
-        for (let i = 0; i < this.particles.length; i++) {
-            const p = this.particles[i];
-
-            // 1. Gravity toward center
-            let dx = this.cx - p.x;
-            let dy = this.cy - p.y;
-            let distSq = dx * dx + dy * dy;
-            let dist = Math.sqrt(distSq);
-
-            // Prevent singularity (softening)
-            if (dist < 20) dist = 20;
-            distSq = dist * dist;
-
-            const forceCentr = this.G / distSq;
-            p.vx += (dx / dist) * forceCentr;
-            p.vy += (dy / dist) * forceCentr;
-
-            // 2. Gravity toward cursor (if active)
+        for (let i = 0; i < this.points.length; i++) {
+            const p = this.points[i];
+            
+            // 1. Spring force pulling back to origin
+            let ax = (p.ox - p.x) * this.TENSION;
+            let ay = (p.oy - p.y) * this.TENSION;
+            
+            // 2. Magnetic pull from mouse
             if (this.mouse.active) {
-                dx = this.mouse.x - p.x;
-                dy = this.mouse.y - p.y;
-                distSq = dx * dx + dy * dy;
-                dist = Math.sqrt(distSq);
-                if (dist < 15) dist = 15;
-                distSq = dist * dist;
-
-                const forceMouse = this.G_MOUSE / distSq;
-                p.vx += (dx / dist) * forceMouse;
-                p.vy += (dy / dist) * forceMouse;
+                let dx = this.mouse.x - p.x;
+                let dy = this.mouse.y - p.y;
+                let distSq = dx*dx + dy*dy;
+                
+                if (distSq < this.MOUSE_RADIUS * this.MOUSE_RADIUS) {
+                    let dist = Math.sqrt(distSq);
+                    // Gaussian-like curve for smooth pulling force
+                    let force = Math.exp(-(dist * dist) / (this.MOUSE_RADIUS * 50));
+                    ax += dx * force * 0.04;
+                    ay += dy * force * 0.04;
+                }
             }
-
-            // 3. Damping
+            
+            // 3. Apply acceleration and damping
+            p.vx += ax;
+            p.vy += ay;
             p.vx *= this.DAMPING;
             p.vy *= this.DAMPING;
-
-            // 4. Euler integration
+            
+            // 4. Update position
             p.x += p.vx;
             p.y += p.vy;
-
-            // 5. Soft boundary (bounce back gently if too far)
-            const margin = 50;
-            if (p.x < -margin || p.x > this.w + margin || p.y < -margin || p.y > this.h + margin) {
-                // Reset to a random orbital position
-                const orbitR = 80 + Math.random() * (Math.min(this.w, this.h) * 0.3);
-                const angle = Math.random() * Math.PI * 2;
-                p.x = this.cx + Math.cos(angle) * orbitR;
-                p.y = this.cy + Math.sin(angle) * orbitR;
-                const speed = Math.sqrt(this.G / orbitR) * 0.8;
-                p.vx = -Math.sin(angle) * speed;
-                p.vy = Math.cos(angle) * speed;
-            }
         }
     }
 
     render() {
-        // Trail effect: draw semi-transparent background each frame
-        this.ctx.fillStyle = `rgba(5, 5, 8, ${this.TRAIL_ALPHA})`;
-        this.ctx.fillRect(0, 0, this.w, this.h);
-
-        // Center glow
-        const centerGrad = this.ctx.createRadialGradient(this.cx, this.cy, 0, this.cx, this.cy, 60);
-        centerGrad.addColorStop(0, 'rgba(6, 182, 212, 0.08)');
-        centerGrad.addColorStop(1, 'transparent');
-        this.ctx.fillStyle = centerGrad;
-        this.ctx.fillRect(this.cx - 60, this.cy - 60, 120, 120);
-
-        // Cursor glow (when active)
-        if (this.mouse.active) {
-            const mouseGrad = this.ctx.createRadialGradient(this.mouse.x, this.mouse.y, 0, this.mouse.x, this.mouse.y, 80);
-            mouseGrad.addColorStop(0, 'rgba(124, 58, 237, 0.06)');
-            mouseGrad.addColorStop(1, 'transparent');
-            this.ctx.fillStyle = mouseGrad;
-            this.ctx.fillRect(this.mouse.x - 80, this.mouse.y - 80, 160, 160);
-        }
-
-        // Particles
-        for (let i = 0; i < this.particles.length; i++) {
-            const p = this.particles[i];
-            this.ctx.beginPath();
-            this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = p.color;
-            this.ctx.globalAlpha = p.alpha;
-            this.ctx.fill();
+        this.ctx.clearRect(0, 0, this.w, this.h);
+        this.ctx.fillStyle = '#ffffff';
+        
+        for (let i = 0; i < this.points.length; i++) {
+            const p = this.points[i];
+            
+            let distSqToMouse = 9999999;
+            if (this.mouse.active) {
+                let d0x = this.mouse.x - p.ox;
+                let d0y = this.mouse.y - p.oy;
+                distSqToMouse = d0x*d0x + d0y*d0y;
+            }
+            
+            let activeFactor = 0;
+            if (distSqToMouse < this.MOUSE_RADIUS * this.MOUSE_RADIUS) {
+                let distToMouse = Math.sqrt(distSqToMouse);
+                // Smooth falloff based on original distance
+                activeFactor = Math.pow(1 - (distToMouse / this.MOUSE_RADIUS), 2);
+            }
+            
+            let currentSize = 1.2 + activeFactor * 3.5;
+            let currentAlpha = 0.15 + activeFactor * 0.7;
+            
+            this.ctx.globalAlpha = currentAlpha;
+            
+            // Draw a precise minimalist cross (+)
+            this.ctx.fillRect(p.x - currentSize, p.y - 0.5, currentSize * 2, 1);
+            this.ctx.fillRect(p.x - 0.5, p.y - currentSize, 1, currentSize * 2);
         }
         this.ctx.globalAlpha = 1;
     }
 }
+
 
 // 4. THE FLUID WARP TRANSITION (Spatial Warp)
 class CompilationTransition {

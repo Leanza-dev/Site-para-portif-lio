@@ -10,7 +10,9 @@ const TRANSLATIONS = {
 
     // Hero
     'hero.tagline':         '[ SOFTWARE ENGINEER ]',
-    'hero.desc':            'Estudante de Ciência da Computação na Mackenzie. Construo sistemas, apps e interfaces — do backend ao pixel.',
+    'hero.desc':            'Estudante de Ciência da Computação na Mackenzie. Construo arquiteturas de sistemas distribuídos em velocidade 10x — usando Engenharia de Software e Inteligência Artificial como alavanca.',
+    'hero.btn.dev':         'SOU RECRUTADOR / DEV',
+    'hero.btn.curious':     'SOU CURIOSO / DESIGNER',
 
     // Marquee
     'marquee.1': 'BACKEND',
@@ -91,8 +93,8 @@ const TRANSLATIONS = {
     'timeline.item3.title': 'INÍCIO E FUNDAMENTOS',
     'timeline.item3.desc':  'Cursos de formação (Alura, EBAC). Aqui construí minha base em desenvolvimento web, APIs e bancos de dados.',
 
-    // Gravity Well (replaces Vault)
-    'gravity.label':        '60fps · matemática pura · zero frameworks',
+    // Kinetic Grid
+    'kinetic.title':        'ENGINEERING<br>AT SCALE',
 
     // Footer CTA
     'footer.cta':           'LET\'S BUILD\nSOMETHING.',
@@ -118,7 +120,9 @@ const TRANSLATIONS = {
 
     // Hero
     'hero.tagline':         '[ SOFTWARE ENGINEER ]',
-    'hero.desc':            'Computer Science student at Mackenzie University. I build systems, apps and interfaces — from backend to pixel.',
+    'hero.desc':            'Computer Science student at Mackenzie University. Building distributed systems architectures at 10x speed — using Software Engineering and AI as leverage.',
+    'hero.btn.dev':         'I AM A RECRUITER / DEV',
+    'hero.btn.curious':     'I AM CURIOUS / DESIGNER',
 
     // Marquee
     'marquee.1': 'BACKEND',
@@ -199,8 +203,8 @@ const TRANSLATIONS = {
     'timeline.item3.title': 'START & FUNDAMENTALS',
     'timeline.item3.desc':  'Training courses (Alura, EBAC). This is where I built my foundation in web development, APIs and databases.',
 
-    // Gravity Well (replaces Vault)
-    'gravity.label':        '60fps · pure math · zero frameworks',
+    // Kinetic Grid
+    'kinetic.title':        'ENGINEERING<br>AT SCALE',
 
     // Footer CTA
     'footer.cta':           'LET\'S BUILD\nSOMETHING.',

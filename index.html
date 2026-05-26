@@ -108,6 +108,17 @@
                     <p class="font-inter text-large text-silver max-w-3xl mt-8 gsap-reveal" data-i18n="hero.desc">
                         Estudante de Ciência da Computação construindo arquiteturas de sistemas distribuídos em velocidade 10x — usando Engenharia de Software e Inteligência Artificial como alavanca.
                     </p>
+
+                    <div class="dual-path-nav mt-8 gsap-reveal" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="magnetic-btn interactive-target" onclick="window.App.lenis.scrollTo('#arsenal')">
+                            <span data-i18n="hero.btn.dev" style="position: relative; z-index: 2;">SOU RECRUTADOR / DEV</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        <button class="magnetic-btn interactive-target" onclick="window.App.lenis.scrollTo('#web-portfolio')" style="background: transparent; border-color: rgba(255,255,255,0.1);">
+                            <span data-i18n="hero.btn.curious" style="position: relative; z-index: 2; color: var(--text-silver);">SOU CURIOSO / DESIGNER</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -543,10 +554,12 @@
                 </div>
             </section>
 
-            <section id="gravity-well" class="sys-module z-front relative-anchor">
-                <div class="container-fluid">
-                    <canvas id="gravity-canvas"></canvas>
-                    <p class="gravity-label" data-i18n="gravity.label">60fps · matemática pura · zero frameworks</p>
+            <section id="kinetic-grid" class="sys-module z-front relative-anchor" style="position: relative; overflow: hidden; min-height: 60vh;">
+                <!-- Full-width canvas without borders -->
+                <canvas id="kinetic-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+                
+                <div class="container-fluid" style="position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; height: 100%;">
+                    <h2 class="font-black text-huge text-white gsap-reveal" data-i18n="kinetic.title" style="margin:0; line-height:0.9; text-align: center; text-shadow: 0 0 40px rgba(255,255,255,0.2);">ENGINEERING<br>AT SCALE</h2>
                 </div>
             </section>
 

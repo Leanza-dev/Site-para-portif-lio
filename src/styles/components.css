@@ -1010,7 +1010,7 @@ body.hover-engaged .cursor-dot { transform: scale(3.5); }
 #architecture .text-huge,
 #bento .text-huge,
 #timeline .text-huge,
-#gravity-well .text-huge {
+#kinetic-grid .text-huge {
     color: var(--pure-white);
     text-shadow: 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(6,182,212,0.15);
 }
@@ -1034,29 +1034,4 @@ body.hover-engaged .cursor-dot { transform: scale(3.5); }
 #bento .text-white,
 #timeline .text-white {
     color: var(--pure-white);
-}
-
-/* ─── GRAVITY WELL CANVAS ─── */
-#gravity-well {
-    position: relative;
-    overflow: hidden;
-}
-
-#gravity-canvas {
-    width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    border-radius: 12px;
-    border: 1px solid var(--border-light);
-    background: #050508;
-    display: block;
-}
-
-.gravity-label {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.25);
-    text-align: center;
-    margin-top: 1.5rem;
 }
