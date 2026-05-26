@@ -29,3 +29,22 @@ Thumbs.db
 # Environment secrets
 .env
 .env.local
+
+# Next.js build cache (web-portfolio subdir)
+web-portfolio/.next/
+web-portfolio/tsconfig.tsbuildinfo
+web-portfolio/next-env.d.ts
+
+# Vercel deployment output (generated, not source)
+.vercel/output/
+.vercel/.env.production.local
+
+# Temporary fix/patch scripts (não são código do site)
+fix.js
+fix_*.js
+
+# PDF / text artifacts
+pdf_out.txt
+
+# Compiled binaries
+*.exe
